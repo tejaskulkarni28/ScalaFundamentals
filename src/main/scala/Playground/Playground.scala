@@ -1,5 +1,6 @@
 package Playground
 
+// all datatypes 
 object Playground extends App {
   println("Line1: Hello!This is Tejas, ready to learn Scala.")
 
