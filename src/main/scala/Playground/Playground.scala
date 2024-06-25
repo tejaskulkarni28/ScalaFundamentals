@@ -28,4 +28,7 @@ object Playground extends App {
   name = "Tejas Kulkarni"
   println("var is mutable: " + name)
 
+  val isIt:Boolean = true
+  println(isIt)
+
 }
