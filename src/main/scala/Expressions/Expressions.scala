@@ -1,19 +1,19 @@
 package Expressions
-// What is the difference between instructions and expressions in Scala?
+// Q) What is the difference between instructions and expressions in Scala?
 // -> Instructions means do something
 // -> Expressions means give me the value of something
 
 object Expressions extends App {
-  val x = 1 + 2 // Expression
-  println(x)
+  val x = 1 + 2 // Expression (Immutable)
+  println(x) // Prints 3
 
   println(1 + 2 * 2)
 
-  println(!(1 == x))
+  println(!(1 == x)) // boolean value
 
-  var aVariable = 2
-  aVariable += 3
-  println(aVariable)
+  var aVariable = 2 // variable in scala can be reassigned (isMutable)
+  aVariable += 3 // here we are adding number 3 into 2 which will give us the result 5
+  println(aVariable) // output is: 5
 
   //  will not compile because of type int and val due to its immutability behaviour
   //  val bVariable = 2
