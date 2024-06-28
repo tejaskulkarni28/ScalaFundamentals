@@ -11,8 +11,10 @@ object Task3 extends App {
     if(n <= 1){
       n
     }else{
+      println(n)
       Fibonacci(n-1) + Fibonacci(n-2)
     }
   }
   println(Fibonacci(4))
 }
+//
