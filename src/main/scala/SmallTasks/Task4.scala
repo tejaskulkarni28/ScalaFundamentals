@@ -10,5 +10,5 @@ object Task4 extends App{
     if(n % 2 == 0) true
     else false
   }
-  println(PrimeNumber(11))
+  println(PrimeNumber(5000))
 }
