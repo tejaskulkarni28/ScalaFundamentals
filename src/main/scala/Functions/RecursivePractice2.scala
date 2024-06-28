@@ -1,8 +1,9 @@
 package Functions
 
 object RecursivePractice2 extends App {
-  def practice(a: Int, b: Int): String = {
-    if(a != b) "Good" else "Not Good"
+  def concatinateString(n: Int, str: String, str1: String): String = {
+    if(n <= 0) str1
+    else concatinateString(n - 1, str, str + str1);
   }
-  println(practice(5, 10))
+  println(concatinateString(3, "AB", ""))
 }

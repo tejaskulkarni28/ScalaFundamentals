@@ -7,7 +7,7 @@ object RecursivePractice1 extends App {
       // Question: I want a method which ony prints the even numbers from 0 to 100
       def printEvenOnly(i: Int, value: Int):Unit={
         // base condition for when to stop a loop
-        if(i >= 100) {
+        if(i > 100) {
           println("Integer I exceeds 100: ")
         }
         if(i <= 100){
