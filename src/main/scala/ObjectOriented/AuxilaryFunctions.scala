@@ -12,7 +12,7 @@ object AuxiliaryFunctions extends App {
   private val object3 = Details(20)
   object3.print()
   
-  private val object4 = Details()
+//  private val object4 = Details()
 }
 
 class Details(var firstname: String, var lastname: String, var age: Int){
