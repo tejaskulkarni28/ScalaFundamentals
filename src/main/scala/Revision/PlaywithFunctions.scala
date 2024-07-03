@@ -8,4 +8,7 @@ object PlaywithFunctions extends App {
 
   private val subtract = (a: Int, b: Int) => a - b
   println(subtract(4, 3))
+
+  private val multiply = (a: Int, b : Int) => a * b
+  println(multiply(2, 2))
 }

@@ -24,6 +24,10 @@ object PlaywithMethods extends App {
   name()
 
 
+  private def surname(): Unit = println("Kulkarni")
+  surname()
+
+
 
 
 }
