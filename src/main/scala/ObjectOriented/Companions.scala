@@ -1,5 +1,7 @@
 package ObjectOriented
 
+// what are the companions ?
+// Same object and class name in the same scope is called companions in scala
 object Companions extends App {
   object Friend{
     val name: String = "Shanatanu"
