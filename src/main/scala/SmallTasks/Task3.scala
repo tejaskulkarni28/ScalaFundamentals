@@ -7,14 +7,13 @@ package SmallTasks
 // Task 4: Test if a number is prime
 
 object Task3 extends App {
-  def Fibonacci(n: Int):Int={
+  private def Fibonacci(n: Int):Int={
     if(n <= 1){
       n
     }else{
-      println(n)
       Fibonacci(n-1) + Fibonacci(n-2)
     }
   }
-  println(Fibonacci(4))
+  println(Fibonacci(8))
 }
 //
