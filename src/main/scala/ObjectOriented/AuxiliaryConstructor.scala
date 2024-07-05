@@ -2,17 +2,17 @@ package ObjectOriented
 
 import scala.annotation.targetName
 
-object AuxiliaryFunctions extends App {
+object AuxiliaryConstructor extends App {
   private val object1 = Details("Amey", "Satwe", 24)
   object1.print()
-  
+
   private val object2 = Details("Tejas")
   object2.print()
-  
+
   private val object3 = Details(20)
   object3.print()
-  
-//  private val object4 = Details()
+
+  //  private val object4 = Details()
 }
 
 class Details(var firstname: String, var lastname: String, var age: Int){
