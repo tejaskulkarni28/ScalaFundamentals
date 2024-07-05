@@ -7,4 +7,7 @@ object Playground2 extends App{
   val joiningDate: String = "01/01/2001"
 
   println("Welcome " + firstName + " " + lastName + " as our new joiner, who had joined on " + joiningDate + " as a " + designation + ". ")
+
+  // with interpolator `s`
+  println(s"Welcome $firstName $lastName as our new joiner, who had joined on $joiningDate as a $designation.")
 }
