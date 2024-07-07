@@ -24,4 +24,70 @@ object Inheritance extends App {
 
   private val instanceOfMaruti = Maruti()
   instanceOfMaruti.printDetails()
+
+  // Triat and abstract + sealed + final
+  abstract class Animal{
+    def domain: String
+
+    def kingdom: String
+
+    def phylum: String
+
+    def classType: String
+
+    def order: String
+
+    def family: String
+
+    def genus: String
+
+    def species: String
+
+    def binomial: String
+  }
+  trait specificDetails{
+    def lifeExpectancy: String
+
+    def height: Float
+
+    def weight: Float
+
+    def colors: String
+  }
+  // need implementations
+  // for example
+  class LhasaApso extends Animal with specificDetails{
+    override def domain: String = "Eukarya"
+
+    override def kingdom: String = "Animalia"
+
+    override def phylum: String = "Chordata"
+
+    override def classType: String = "Mammalia"
+
+    override def order: String = "Carnivora"
+
+    override def family: String = "Canidae"
+
+    override def genus: String = "Canis"
+
+    override def species: String = "Canis lupus"
+
+    override def binomial: String = "Canis lupus familiaris"
+
+    override def lifeExpectancy: String = "12-15 years"
+
+    override def height: Float = 28.0f // Example height in cm
+
+    override def weight: Float = 6.5f // Example weight in kg
+
+    override def colors: String = "Gold, white, black, brown, honey, slate, gray, brindle"
+  }
+
+  private val lhasaApso = new LhasaApso
+  println(s"Binomial name: ${lhasaApso.binomial}")
+  println(s"Life expectancy: ${lhasaApso.lifeExpectancy}")
+  println(s"Height: ${lhasaApso.height} cm")
+  println(s"Weight: ${lhasaApso.weight} kg")
+  println(s"Colors: ${lhasaApso.colors}")
 }
