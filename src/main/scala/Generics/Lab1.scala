@@ -27,14 +27,21 @@ object Lab1 extends App {
   class Dog extends Animal{}
   // cat and dogs can be subtype of class animal
 
-  class BoxOfAnimal[A]{}
+  class BoxOfAnimal[+A]{}
 
   // Invariance
   val listOfCats: BoxOfAnimal[Cat] = BoxOfAnimal[Cat]
-  val boxOfAnimal: BoxOfAnimal[Animal] = listOfCats
+  val boxOfAnimal: BoxOfAnimal[Animal] = listOfCats  
 //  `You try to assign listOfCats (which is of type BoxOfAnimal[Cat]) to boxOfAnimal (which is of type BoxOfAnimal[Animal]).
 //  Since BoxOfAnimal is invariant, BoxOfAnimal[Cat] is not considered a subtype of BoxOfAnimal[Animal].
 //  This results in a type mismatch error, and the assignment is not allowed`
-
+ 
+// `Covariance`
+  class Vegetable
+  class Potato extends Vegetable 
+  class BoxOfVegetables[+A]{}
+  val potatoes: BoxOfVegetables[Potato] = BoxOfVegetables[Potato]
+  val boxOfPotatoes: BoxOfVegetables[Vegetable] = potatoes
+  
 
 }
