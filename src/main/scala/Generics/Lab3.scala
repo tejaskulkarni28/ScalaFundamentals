@@ -24,7 +24,7 @@ object Lab3 extends App{
   private val dog3 = new Dog("Jimmy")
   private val dog4 = new Dog("Jolly")
 
-  private val stackOfDogs = new Stack[Dog]
+  private val stackOfDogs: Stack[Dog] = new Stack[Dog]
   stackOfDogs.push(dog1)
   stackOfDogs.push(dog2)
   stackOfDogs.push(dog3)
