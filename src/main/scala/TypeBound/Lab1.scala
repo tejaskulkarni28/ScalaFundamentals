@@ -4,6 +4,7 @@ object Lab1 extends App {
   // Bounded types
   class Animal
   class Dog extends Animal
+  class Man1
   class Man extends Dog // just for fun not correct I know
 
 
@@ -21,8 +22,8 @@ object Lab1 extends App {
   // here a -> dog and a should be the subtype of Animal which is dog
   // that means it works
 
-  val listOfDogs1: MyList[Man] = new MyList[Man]
-  // here Man means A type of List is not a subclass Of Animal
+//  val listOfDogs1: MyList[Man1] = new MyList[Man1]
+  // here Man1 means A type of List is not a subclass Of Animal
   // which means incorrect that why it is giving me the error
 
   // -> Let's try lower bound
@@ -37,7 +38,11 @@ object Lab1 extends App {
   // A should be the supertype of Dog but we will give a class
   // type which is not the supertype of the class Dog
   // therefore it will not work
-  val listOfStacks:Stack[Man] = Stack[Man]
+//  val listOfStacks:Stack[Man] = Stack[Man]
   // so yess it did not worked
+
+  // need to comment down the wrong lines otherwise I can;t compile
+  // other files..
 }
+
 
