@@ -1,5 +1,5 @@
 package Generics
-
+// Generics are immutable list in scala
 object Lab1 extends App {
   // How to define the generics
   class Test[A]{}
@@ -19,7 +19,7 @@ object Lab1 extends App {
 
   // covariance types:
   class CovariantList[+A]{}
-  class InvarianceList[A]{}
+  class InvarianceList[A]{} // by default it is Invariance
   class ContravariantList[-A]{}
 
   class Animal{}
@@ -39,9 +39,14 @@ object Lab1 extends App {
 // `Covariance`
   class Vegetable
   class Potato extends Vegetable 
-  class BoxOfVegetables[+A]{}
+  class BoxOfVegetables[+A]{} // + for covariance and - for contravariant
   val potatoes: BoxOfVegetables[Potato] = BoxOfVegetables[Potato]
   val boxOfPotatoes: BoxOfVegetables[Vegetable] = potatoes
+
+  // `Contravariant`
+  class Tomato extends Vegetable
+  val tomatoes: BoxOfVegetables[Vegetable] = BoxOfVegetables[Vegetable]
+  val boxOfTomatoes: BoxOfVegetables[Tomato] = tomatoes // make -A to use
   
 
 }
