@@ -43,10 +43,10 @@ object Lab1 extends App {
   val potatoes: BoxOfVegetables[Potato] = BoxOfVegetables[Potato]
   val boxOfPotatoes: BoxOfVegetables[Vegetable] = potatoes
 
-  // `Contravariant`
-  class Tomato extends Vegetable
-  val tomatoes: BoxOfVegetables[Vegetable] = BoxOfVegetables[Vegetable]
-  val boxOfTomatoes: BoxOfVegetables[Tomato] = tomatoes // make -A to use
+//  // `Contravariant`
+//  class Tomato extends Vegetable
+//  val tomatoes: BoxOfVegetables[Vegetable] = BoxOfVegetables[Vegetable]
+//  val boxOfTomatoes: BoxOfVegetables[Tomato] = tomatoes // make -A to use
   
 
 }
