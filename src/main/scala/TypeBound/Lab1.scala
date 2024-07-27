@@ -1,48 +1,26 @@
 package TypeBound
 
 object Lab1 extends App {
-  // Bounded types
   class Animal
-  class Dog extends Animal
-  class Man1
-  class Man extends Dog // just for fun not correct I know
+  class Pet extends Animal
+  class Wild extends Animal
+
+  class Dog extends Pet
+  class Cat extends Pet
+
+  class Lion extends Wild
+  class Tiger extends Wild
 
 
-  // upper bound example
-  class MyList[A <: Animal]{}
+  class PetContainer[+A <: Pet]
+  // extends Pet -> `If we do this then it will allow us Lion to be in the pet container
+  // so the lower-type bound restricts us to do that which will be helpful in writing good code
 
-  // lower bound example
-  class Stack[A >: Dog]{}
+  class WildContainer[+A] extends Wild
 
-
-  val instanceOfDog = new Dog()
-  val instanceOfAnimal = new Animal()
-
-  val listOfDogs:MyList[Dog] = new MyList[Dog]
-  // here a -> dog and a should be the subtype of Animal which is dog
-  // that means it works
-
-//  val listOfDogs1: MyList[Man1] = new MyList[Man1]
-  // here Man1 means A type of List is not a subclass Of Animal
-  // which means incorrect that why it is giving me the error
-
-  // -> Let's try lower bound
-  // -> In lower bound A says that A should be superclass
-  // -> of Dog which means Animal is the superclass of Dog
-  // -> therefore it will work fantastically
-  val listOfAnimals:Stack[Animal] = Stack[Animal]
-
-
-  // but let's give the Dog as a type of A which will
-  // not work because as per the rule give in lower bound
-  // A should be the supertype of Dog but we will give a class
-  // type which is not the supertype of the class Dog
-  // therefore it will not work
-//  val listOfStacks:Stack[Man] = Stack[Man]
-  // so yess it did not worked
-
-  // need to comment down the wrong lines otherwise I can;t compile
-  // other files..
+  val dog: PetContainer[Dog] = PetContainer[Dog]
+  val cat: PetContainer[Cat] = PetContainer[Cat]
+  //  val lion: PetContainer[Lion] = PetContainer[Lion] if uncomment the code then it will show us the error
 }
 
 
