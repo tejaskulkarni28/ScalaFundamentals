@@ -11,3 +11,4 @@ object CBNandCBV extends App {
   println(callByValue(5)) // Argument is evaluated first
   println(callByName(5)) // Argument is evaluated till it comes in the method `Syntax: :=>`
 }
+ 
